@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>jiang01.png</file>
+        <file>level01background.png</file>
+        <file>keng.png</file>
+        <file>yasina.png</file>
+        <file>bullet.png</file>
+        <file>lost.png</file>
+        <file>win.png</file>
+        <file>qiqiu.png</file>
+        <file>wei01.png</file>
+        <file>background.png</file>
+        <file>back.png</file>
+        <file>level02background.jpg</file>
+        <file>keng02.png</file>
+        <file>bullet01.png</file>
+        <file>bullet02.png</file>
+        <file>shuitong.png</file>
+        <file>jiang02.png</file>
+        <file>jiang.png</file>
+        <file>level03background.png</file>
+        <file>keng03.png</file>
+        <file>ju.png</file>
+        <file>qiqiu01.png</file>
+        <file>bgm.mp3</file>
+        <file>reduceHP.mp3</file>
+        <file>shoot.mp3</file>
+        <file>towerput.mp3</file>
+    </qresource>
+</RCC>
