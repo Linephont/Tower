@@ -29,7 +29,7 @@ private:
     int				tow_range;
     int				tow_power;
     int				tow_rate;
-    int tow_kind;
+    int             tow_kind;
     QPoint	tow_poi;
     Monster *		tow_monster;
     MyWindow *	    tow_game;

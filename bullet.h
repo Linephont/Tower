@@ -21,13 +21,13 @@ public:
     Bullet(MyWindow *game,QPoint startpoi,  QPoint targetpoi, Monster *target,int power,int kind);
     void draw(QPainter *painter) const;
     void move();
-    void setnowpoi(QPoint pos);
+    void setnowpoi(QPoint poi);
     QPoint nowpoi() const;
 private slots:
     void checktarget();
 private:
-    const QPoint	bul_startpoi;
-    const QPoint	bul_targetpoi;
+    QPoint	bul_startpoi;
+    QPoint	bul_targetpoi;
     QPixmap	        bul_pix;
     QPoint			bul_nowpoi;
     Monster *		bul_target;

@@ -23,7 +23,7 @@ MyWindow::MyWindow(int _num):
      mus=new QMediaPlayer(this);
      if(mus!=NULL)
      {
-         mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/bgm.mp3"));
+         mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/bgm.mp3"));//请务必改为本地文件地址
          mus->play();
 
      }
@@ -124,8 +124,6 @@ MyWindow::MyWindow(int _num):
         QTimer *timer = new QTimer(this);
         connect(timer, SIGNAL(timeout()), this, SLOT(updateMap()));
         timer->start(20);
-
-        // 设置300ms后游戏启动
         QTimer::singleShot(300, this, SLOT(loadWave()));
         break;
         }
@@ -446,7 +444,6 @@ void MyWindow::paintEvent(QPaintEvent *)
         monster->draw(&pa);
     foreach (const Bullet *bullet, my_bulletList)
         bullet->draw(&pa);
-    //drawWave(&pa);
     drawHP(&pa);
     drawMONEY(&pa);
     QPainter painter(this);
@@ -457,21 +454,21 @@ bool MyWindow::loadWave()
         if (mon_waves >=2)
             return false;
         Way *startwayPoint = my_wayList.back();
-        int monsterstartInterval01[] = { 100, 1000};
+        int monsterstartinterval01[] = { 100, 1000};
         for (int i = 0; i < 2; i++)
         {
             QString str01=":/jiang.png";
             Monster *enemy = new Monster (startwayPoint, this,str01,60,1.0);
             my_monsterList.push_back(enemy);
-            QTimer::singleShot(monsterstartInterval01[i], enemy, SLOT(canmove()));
+            QTimer::singleShot(monsterstartinterval01[i], enemy, SLOT(canmove()));
         }
-        int monsterstartInterval02[] = { 3000, 3700,4300,5000};
+        int monsterstartinterval02[] = { 3000, 3700,4300,5000};
         for (int i = 0; i < 3; i++)
         {
             QString str01=":/qiqiu01.png";
             Monster *enemy = new Monster (startwayPoint, this,str01,20,2.0);
             my_monsterList.push_back(enemy);
-            QTimer::singleShot(monsterstartInterval02[i], enemy, SLOT(canmove()));
+            QTimer::singleShot(monsterstartinterval02[i], enemy, SLOT(canmove()));
         }
         return true;
 }
@@ -480,29 +477,29 @@ bool MyWindow::loadWave2()
     if (mon_waves >=3)
         return false;
     Way *startwayPoint = my_wayList.back();
-    int monsterstartInterval01[] = { 100, 1000,1900,2800};
+    int monsterstartinterval01[] = { 100, 1000,1900,2800};
     for (int i = 0; i < 4; i++)
     {
         QString str01=":/jiang.png";
         Monster *monster = new Monster (startwayPoint, this,str01,60,1.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval01[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval01[i], monster, SLOT(canmove()));
     }
-    int monsterstartInterval02[] = { 3000, 3700,4300,5000,5900};
+    int monsterstartinterval02[] = { 3000, 3700,4300,5000,5900};
     for (int i = 0; i < 5; i++)
     {
         QString str01=":/qiqiu01.png";
         Monster *monster = new Monster (startwayPoint, this,str01,20,2.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval02[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval02[i], monster, SLOT(canmove()));
     }
-    int monsterstartInterval03[] = { 7000, 10000};
+    int monsterstartinterval03[] = { 7000, 10000};
     for (int i = 0; i < 2; i++)
     {
         QString str01=":/shuitong.png";
         Monster *monster = new Monster (startwayPoint, this,str01,200,1.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval03[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval03[i], monster, SLOT(canmove()));
     }
     return true;
 }
@@ -511,37 +508,37 @@ bool MyWindow::loadWave3()
     if (mon_waves >=2)
         return false;
     Way *startwayPoint = my_wayList.back();
-    int monsterstartInterval01[] = { 100, 1000,5000,6000,7000};
+    int monsterstartinterval01[] = { 100, 1000,5000,6000,7000};
     for (int i = 0; i < 5; i++)
     {
         QString str01=":/jiang.png";
         Monster *monster = new Monster (startwayPoint, this,str01,60,1.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval01[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval01[i], monster, SLOT(canmove()));
     }
-    int monsterstartInterval02[] = { 3000, 3700,4300,5000,5900};
+    int monsterstartinterval02[] = { 3000, 3700,4300,5000,5900};
     for (int i = 0; i < 5; i++)
     {
         QString str01=":/qiqiu01.png";
         Monster *monster = new Monster (startwayPoint, this,str01,20,2.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval02[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval02[i], monster, SLOT(canmove()));
     }
-    int monsterstartInterval03[] = { 9000, 11000,13000};
+    int monsterstartinterval03[] = { 9000, 11000,13000};
     for (int i = 0; i < 3; i++)
     {
         QString str01=":/shuitong.png";
         Monster *monster = new Monster (startwayPoint, this,str01,200,1.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval03[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval03[i], monster, SLOT(canmove()));
     }
-    int monsterstartInterval04[] = { 18000};
+    int monsterstartinterval04[] = { 18000};
     for (int i = 0; i < 1; i++)
     {
         QString str01=":/ju.png";
         Monster *monster = new Monster (startwayPoint, this,str01,400,1.0);
         my_monsterList.push_back(monster);
-        QTimer::singleShot(monsterstartInterval04[i], monster, SLOT(canmove()));
+        QTimer::singleShot(monsterstartinterval04[i], monster, SLOT(canmove()));
     }
     return true;
 }
@@ -683,7 +680,7 @@ void MyWindow::addmoney(int money)
 void MyWindow::HPreduce(int damage)
 {
     QMediaPlayer* mus=new QMediaPlayer(this);
-    mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/reduceHP.mp3"));
+    mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/reduceHP.mp3"));//请务必改为本地文件地址
     mus->play();
     HP -= damage;
     if (HP <= 0)
@@ -705,9 +702,8 @@ void MyWindow::gameover()
 void MyWindow::puttowersound()
 {
     QMediaPlayer* mus=new QMediaPlayer(this);
-    mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/towerput.mp3"));
+    mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/towerput.mp3"));//请务必改为本地文件地址
     mus->play();
-
 }
 MyWindow::~MyWindow()
 {

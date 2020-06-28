@@ -35,12 +35,11 @@ public:
     QList<Monster *>		my_monsterList;
     QList<Bullet *>			my_bulletList;
     bool canBuyTower(int money);
-    void drawWave(QPainter *painter);
     void drawHP(QPainter *painter);
     void drawMONEY(QPainter *painter);
     void gameover();
     void HPreduce(int damage = 1);
-    void addmoney(int gold);
+    void addmoney(int money);
     void removemonster(Monster *monster);
     void removebullet(Bullet *bullet);
     void puttowersound();

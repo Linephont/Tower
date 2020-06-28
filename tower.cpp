@@ -92,7 +92,7 @@ void Tower::shoot()
 {
     Bullet *bullet = new Bullet(tow_game,tow_poi, tow_monster->poi(), tow_monster,tow_power,tow_kind);
     QMediaPlayer* mus=new QMediaPlayer(this);
-    mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/shoot.mp3"));
+    mus->setMedia(QUrl::fromLocalFile("E:/code/tower666002/shoot.mp3"));//请务必改为本地文件地址
     mus->play();
     bullet->move();
     tow_game->makebullet(bullet);
